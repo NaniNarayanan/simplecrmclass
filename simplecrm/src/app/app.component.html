@@ -1,0 +1,150 @@
+<router-outlet></router-outlet>
+<link rel="stylesheet" href="app.component.scss">
+<h1 class="bg-primary">This is My App</h1>
+<button mat-icon-button color="warn">Hello</button>
+<h1>{{title}}</h1>
+<div class="bg-success"*ngIf="successmsg">Hi</div>
+<div class="bg-not"*ngIf="successmsg">Hi</div>
+<div class="bg-and"*ngIf="successmsg&&showmsg">Hi</div>
+<div class="bg-or"*ngIf="successmsg||showmsg">Hi</div>
+<div *ngIf="successmsg;else a">Hi</div>
+<ng-template #a>Hello</ng-template>
+<div *ngIf="successmsg then themsg else failmsg">Hi From if</div>
+<ng-template #themsg>Hi from then</ng-template>
+<ng-template #failmsg>Hi From else</ng-template>
+<ul>
+    <!--<li *ngFor="let c of contacts">
+    <li *ngFor="let c of contacts; index as i; first as f; last as l; even as e; odd as o">
+        <div *ngIf="f" style="color: red;">
+            {{i}}
+            {{c.firstname}}
+            {{c.lastname}}
+            {{c.contactid}}
+        </div>
+        
+        
+        <div *ngIf="l" style="color: green;">
+            {{i}}
+            {{c.firstname}}
+            {{c.lastname}}
+            {{c.contactid}}
+        </div>
+        
+        
+    </li>
+</ul>-->
+    <ul>
+        <li *ngFor="let c of contacts; index as i; first as f;" style="color: purple;">
+            {{i}}
+            {{c.firstname}}
+            {{c.lastname}}
+            {{c.contactid}}
+
+        </li>
+    </ul>
+
+    <ul>
+        <li *ngFor="let c of contacts; index as i; first as f;" style="color: purple;">
+            <div *ngIf="f; else f1;" style="border: 1px solid red;">
+            {{i}}
+            {{c.firstname}}
+            {{c.lastname}}
+            {{c.contactid}}
+            </div>
+            <ng-template #f1>
+                <div style="color:red;">
+                    {{i}}
+                    {{c.firstname}}
+                    {{c.lastname}}
+                    {{c.contactid}}
+                </div>
+            </ng-template>
+        </li>
+    </ul>
+
+    <ul>
+        <li *ngFor="let c of contacts; index as i; last as l;" style="color: purple;">
+            <div *ngIf="l; else l1;" style="border: 1px solid red;">
+            {{i}}
+            {{c.firstname}}
+            {{c.lastname}}
+            {{c.contactid}}
+            </div>
+            <ng-template #l1>
+                <div style="color:red;">
+                    {{i}}
+                    {{c.firstname}}
+                    {{c.lastname}}
+                    {{c.contactid}}
+                </div>
+            </ng-template>
+        </li>
+    </ul>
+
+    <ul>
+        <li *ngFor="let c of contacts; index as i; odd as o;" style="color: purple;">
+            <div *ngIf="o; else o1;" style="border: 1px solid red;">
+            {{i}}
+            {{c.firstname}}
+            {{c.lastname}}
+            {{c.contactid}}
+            </div>
+            <ng-template #o1>
+                <div style="color:brown;">
+                    {{i}}
+                    {{c.firstname}}
+                    {{c.lastname}}
+                    {{c.contactid}}
+                </div>
+            </ng-template>
+        </li>
+    </ul>
+
+
+
+    <ul>
+        <li *ngFor="let c of contacts; index as i; even as e;" style="color: purple;">
+            <div *ngIf="e; else e1;" style="border: 1px solid red;">
+            {{i}}
+            {{c.firstname}}
+            {{c.lastname}}
+            {{c.contactid}}
+            </div>
+            <ng-template #e1>
+                <div style="color:blue;">
+                    {{i}}
+                    {{c.firstname}}
+                    {{c.lastname}}
+                    {{c.contactid}}
+                </div>
+            </ng-template>
+        </li>
+    </ul>
+
+
+    <div [ngSwitch]="category">
+        <div *ngSwitchCase="'clothing'">Welcome to Clothing section</div>
+    </div>
+
+    <div [ngSwitch]="category1">
+        <div *ngSwitchCase="'food'">Welcome to Food section</div>
+    </div>
+
+    <div [ngSwitch]="category2">
+        <div *ngSwitchCase="'Accessories'">Welcome to Accessories section</div>
+    </div>
+
+    <!--<div [ngSwitch]="salarypa">
+        <div *ngSwitchCase="salarypa">
+            <div *ngIf="salarypa<300000">No Need to Pay Tax</div>
+            <div *ngIf="salarypa>300000&&salarypa<500000">Submit Docs</div>
+            <div *ngIf="salarypa>500000">Pay Taxes</div>
+        </div>-->
+
+<div [ngStyle]="{'background-color':'green'}">Hello</div>
+
+<div [ngStyle]="{'background-color':'red'}">This is a Red division</div>
+
+<div [ngStyle]="{'color':'white','border':'3px solid red','background-color':'pink'}">Many style using ngStyle</div>
+
+<div [ngStyle]="{'color':txtcolor,'border':borders,'background-color':bgcolor}">Many Style Give as Variable using ngStyle</div>
