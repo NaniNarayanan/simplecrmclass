@@ -39,5 +39,15 @@ export class AppComponent {
   txtcolor='white';
   bgcolor='pink';
   borders='3px solid red';
+  stylevar='c3';
+  stylevar2='c2';
+  role='admin';
+  getClassName(){
+    return 'c3';
+  };
+  page_heading="Welcome";
+  page_count=10;
+  user_object={'firstname':'A','lastname':'B'};
+  isUserLoggedIn=true;
 }
 

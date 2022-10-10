@@ -148,3 +148,51 @@
 <div [ngStyle]="{'color':'white','border':'3px solid red','background-color':'pink'}">Many style using ngStyle</div>
 
 <div [ngStyle]="{'color':txtcolor,'border':borders,'background-color':bgcolor}">Many Style Give as Variable using ngStyle</div>
+
+<div [ngClass]="'c1'">This is ngClass</div>
+<div [ngClass]="'c2'">This is ngClass2</div>
+<div [ngClass]="'c1 c2'">This is Both ngClass C1 and C2</div>
+
+<div [ngClass]="stylevar">This is ngClass3</div>
+<div [ngClass]="stylevar2">This is ngClass2</div>
+
+<div [ngClass]="role==='admin'?'c3':'c2'">Hello User</div>
+
+<div [ngClass]="{c1:false,c2:true}">Hello</div>
+
+<div [ngClass]="{c1:true,c2:false}">Hello</div>
+
+<div [ngClass]="getClassName()">This is function method</div>
+
+<h1>{{page_heading}}</h1>
+<h6>PageNo:{{page_count}}</h6>
+<div *ngIf="isUserLoggedIn">
+    <div>{{user_object.firstname}}</div>
+    <div>{{user_object.lastname}}</div>
+</div>
+
+<table border="2px">
+    <tr>
+        <th>contactid</th>
+        <th>firstname</th>
+        <th>lastname</th>
+    </tr>
+
+    <tr *ngFor="let a of contacts">
+        <td>{{a.contactid}}</td>
+        <td>{{a.firstname}}</td>
+        <td>{{a.lastname}}</td>
+    </tr>
+</table>
+
+<a href="#">This is link</a>
+<div *ngIf="isUserLoggedIn">
+    <div [innerHTML]="user_object.firstname"></div>
+</div>  
+<table class="tt">
+<tr *ngFor="let a of contacts">
+    <td [title]="a.contactid"></td>
+    <td [title]="a.firstname"></td>
+    <td [title]="a.lastname"></td>
+</tr>
+</table>
