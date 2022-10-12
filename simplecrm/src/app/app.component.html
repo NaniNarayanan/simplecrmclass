@@ -196,3 +196,8 @@
     <td [title]="a.lastname"></td>
 </tr>
 </table>
+
+<div>{{user.city}}</div>
+<div>{{user.city | highpipe:user.city}}</div>
+
+<div [innerHTML]="user.city|highpipe:user.city"></div>

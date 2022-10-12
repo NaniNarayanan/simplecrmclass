@@ -49,5 +49,10 @@ export class AppComponent {
   page_count=10;
   user_object={'firstname':'A','lastname':'B'};
   isUserLoggedIn=true;
+  user={
+    firstname:"Naga",
+    city:"chennai",
+    citycode:6000020
+  };
 }
 
