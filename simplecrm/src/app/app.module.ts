@@ -6,19 +6,40 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import { HighpipePipe } from './highpipe.pipe';
+import { LoansComponent } from './loans/loans.component';
+import { AddloanComponent } from './addloan/addloan.component';
+import { LoantypesComponent } from './loantypes/loantypes.component';
+import { ProductComponent } from './product/product.component';
+import { ClientsComponent } from './clients/clients.component';
+import { SearchComponent } from './search/search.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AddcustomerComponent } from './addcustomer/addcustomer.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HighpipePipe
+    HighpipePipe,
+    LoansComponent,
+    AddloanComponent,
+    LoantypesComponent,
+    ProductComponent,
+    ClientsComponent,
+    SearchComponent,
+    PagenotfoundComponent,
+    AddcustomerComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatButtonModule
+    MatButtonModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
+  
   providers: [],
   bootstrap: [AppComponent]
 })
