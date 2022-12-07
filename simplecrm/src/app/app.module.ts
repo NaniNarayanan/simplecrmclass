@@ -15,6 +15,7 @@ import { SearchComponent } from './search/search.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddcustomerComponent } from './addcustomer/addcustomer.component';
+import {HttpClientModule} from '@angular/common/http'
 
 
 
@@ -37,7 +38,8 @@ import { AddcustomerComponent } from './addcustomer/addcustomer.component';
     BrowserAnimationsModule,
     MatButtonModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   
   providers: [],
