@@ -10,9 +10,24 @@ export class AddcustomerComponent implements OnInit {
   u:any;
   constructor(private uService:UsersService){}
 
+  postfn(){
+    const postbody={
+      title:'CSE',
+      name:'abcd'
+    };
+    this.uService.addUser(postbody).subscribe(
+      data=>{
+        console.log(data);
+      },
+      (err)=>{console.log("Error");
+    })
+  }
 
   ngOnInit(): void {
-    this.uService.getusers().subscribe(data=>{this.u=data;})
+    this.uService.getusers().subscribe(data=>{this.u=data;},
+      (err)=>{
+        console.log("unable to get"+err);
+      })
   }
 
 }
